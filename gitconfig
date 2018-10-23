@@ -1,8 +1,8 @@
 [user]
-  name = nobuti
-  email = buti@nobuti.com
+  name = camimaya21
+  email = camilamaya21@gmail.com
 [credential]
-  helper = osxkeychain
+	helper = cache
 [color]
   branch = auto
   diff = auto
@@ -22,7 +22,7 @@
   changed = green
   untracked = cyan
 [core]
-  editor = vim
+  editor = code
   excludesfile = ~/.gitignore
   autocrlf = input
   pager = less -R
@@ -36,6 +36,7 @@
   aa = add --all
   ap = add --patch
   ca = commit --amend
+  cm = commit -m
   ci = commit -v
   co = checkout
   create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -

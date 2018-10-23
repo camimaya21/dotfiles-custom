@@ -16,8 +16,8 @@ done
 # automatically enter directories without cd
 setopt auto_cd
 
-# use sublime as the visual editor
-export VISUAL=subl
+# use code as the visual editor
+export VISUAL=code
 export EDITOR=vim
 
 # aliases
@@ -57,7 +57,11 @@ setopt CORRECT CORRECT_ALL
 setopt EXTENDED_GLOB
 
 export PATH="$HOME/.yarn/bin:$PATH"
+
+# @link: http://github.com/zsh-users/zsh-syntax-highlighting
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red') # To have commands starting with `rm -rf` in red:
 
 eval "$(rbenv init -)"
 . ~/.zsh/plugins/z/z.sh

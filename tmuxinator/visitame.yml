@@ -6,35 +6,41 @@ pre_window:
   - . ~/Dev/7r/visitame/set-vars.sh
 windows:
   # Visita.me API core
-  - core:
-      layout: eee7,204x47,0,0{102x47,0,0,0,101x47,103,0[101x23,103,0,4,101x23,103,24,5]}
-      root: ~/Dev/7r/visitame/visitame-core
-      panes:
-        - yarn && PORT=3000 yarn dev
-        - now logs https://visitame-core.now.sh -f
+  # - core:
+  #    layout: eee7,204x47,0,0{102x47,0,0,0,101x47,103,0[101x23,103,0,4,101x23,103,24,5]}
+  #    root: ~/Dev/7r/visitame/visitame-core
+  #    panes:
+  #      - yarn && PORT=3000 yarn dev
+  #      - now logs https://visitame-core.now.sh -f
   # Visita.me Cron
   - cron:
       layout: c758,204x47,0,0{101x47,0,0,1,102x47,102,0[102x23,102,0,6,102x23,102,24,7]}
-      root: ~/Dev/7r/visitame/visitame-cron
+      root: ~/Dev/7r/visitame/cron-dev
       panes:
         - yarn && PORT=3001 yarn dev
         - now logs https://visitame-cron.now.sh -f
   # Visita.me Web Bot
   - bot-client:
-      root: ~/Dev/7r/visitame/visitame-bot-client
+      root: ~/Dev/7r/visitame/bot-client-dev
       panes:
         - yarn && PORT=3004 yarn start
   - bot-server:
-      root: ~/Dev/7r/visitame/visitame-bot-server
+      root: ~/Dev/7r/visitame/bot-server-dev
       panes:
         - yarn && PORT=3005 yarn dev
   # Bmo
   - bmo:
-      root: ~/Dev/7r/bmo
+      root: ~/Dev/7r/bmo-dev
       panes:
         - yarn && PORT=3006 yarn dev
+
+  #Admin
+  - admin:
+      root: ~/Dev/7r/visitame/admin-dev
+      panes:
+        - yarn && PORT=3003 yarn start
   # ngrok service
   - ngrok:
       root: ~/Dev/7r/visitame
       panes:
-        - ngrok start -config ./ngrok.yml core botclient botserver cron
+        - ngrok start -config ./ngrok.yml core botclient botserver cron bmo admin
