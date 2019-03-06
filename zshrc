@@ -65,3 +65,9 @@ ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red') # To have commands st
 
 eval "$(rbenv init -)"
 . ~/.zsh/plugins/z/z.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/camimaya/Dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/camimaya/Dev/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/camimaya/Dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/camimaya/Dev/google-cloud-sdk/completion.zsh.inc'; fi
