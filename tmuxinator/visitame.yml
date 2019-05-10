@@ -10,7 +10,7 @@ windows:
       layout: c758,204x47,0,0{101x47,0,0,1,102x47,102,0[102x23,102,0,6,102x23,102,24,7]}
       root: ~/Dev/7r/visitame/cron-dev
       panes:
-        - yarn && PORT=3001 yarn dev
+        - nvm use v9.4.0 && yarn && PORT=3001 yarn dev
        # - now logs https://visitame-cron.now.sh -f
   # Cron
     # - cron:
@@ -21,33 +21,38 @@ windows:
   - botclient:
       root: ~/Dev/7r/visitame/bot-client-dev
       panes:
-        - yarn && PORT=3002 yarn start
+        - nvm use v9.4.0 && yarn && PORT=3002 yarn start
   - botserver:
       root: ~/Dev/7r/visitame/bot-server-dev
       panes:
-        - yarn && PORT=3003 yarn dev
+        - nvm use v9.4.0 && yarn && PORT=3003 yarn dev
   #Admin
   - admin:
       root: ~/Dev/7r/visitame/admin-dev
       panes:
-        - yarn && PORT=3004 yarn start
+        - nvm use v9.4.0 && yarn && PORT=3004 yarn start
   # Bmo
   - bmo:
       root: ~/Dev/7r/visitame/bmo-dev
       panes:
-        - yarn && PORT=3000 yarn dev
+        - nvm use v9.4.0 && yarn && PORT=3000 yarn dev
   # The Lich
   - thelich:
       root: ~/Dev/7r/visitame/the-lich-dev
       panes:
-        - yarn && PORT=3005 yarn dev
+        - nvm use v9.4.0 && yarn && PORT=3005 yarn dev
   #Visitame web
   - visitameweb:
       root: ~/Dev/7r/visitame/website
       panes:
         - yarn && PORT=3006 yarn start
+# proxy-web
+  - proxy:
+      root: ~/Dev/7r/visitame/website-proxy
+      panes:
+        - nvm use v9.4.0 && yarn && PORT=3007 yarn dev
   # ngrok service
   - ngrok:
       root: ~/Dev/7r/visitame
       panes:
-        - ngrok start -config ./ngrok.yml bmo cron botclient botserver admin thelich visitameweb
+        - ngrok start -config ./ngrok.yml bmo cron botclient botserver admin thelich visitameweb proxy
