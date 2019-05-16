@@ -40,19 +40,19 @@ windows:
   - thelich:
       root: ~/Dev/7r/visitame/the-lich-dev
       panes:
-        - nvm use v9.4.0 && yarn && PORT=3005 yarn dev
-  #Visitame web
+        - yarn && PORT=3005 yarn dev
+  # Visitame web
   - visitameweb:
       root: ~/Dev/7r/visitame/website
       panes:
         - yarn && PORT=3006 yarn start
-# proxy-web
-  - proxy:
+  # proxydev
+  - proxydev:
       root: ~/Dev/7r/visitame/website-proxy
       panes:
-        - nvm use v9.4.0 && yarn && PORT=3007 yarn dev
+        - yarn && PORT=3007 yarn start
   # ngrok service
   - ngrok:
       root: ~/Dev/7r/visitame
       panes:
-        - ngrok start -config ./ngrok.yml bmo cron botclient botserver admin thelich visitameweb proxy
+        - ngrok start -config ./ngrok.yml bmo cron botclient botserver admin thelich visitameweb proxydev

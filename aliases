@@ -17,6 +17,9 @@ alias v="$VISUAL"
 alias b="bundle"
 alias be="bundle exec"
 
+#Tmux
+alias tks="tmux kill-session"
+
 for alias in ~/.zsh/aliases/*; do
   source $alias
 done
