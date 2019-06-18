@@ -51,7 +51,7 @@ windows:
       root: ~/Dev/7r/visitame/website-proxy
       panes:
         - nvm use v9.4.0 && yarn && PORT=3007 yarn start
-  # Key-per
+  # Keyper
   - keyper:
       root: ~/Dev/7r/visitame/key-per-dev
       panes:
