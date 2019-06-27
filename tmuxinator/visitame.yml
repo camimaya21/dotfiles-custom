@@ -46,8 +46,8 @@ windows:
       root: ~/Dev/7r/visitame/website
       panes:
         - yarn && PORT=3006 yarn start
-  # proxydev
-  - proxydev:
+  # proxy
+  - proxy:
       root: ~/Dev/7r/visitame/website-proxy
       panes:
         - nvm use v9.4.0 && yarn && PORT=3007 yarn start
@@ -60,4 +60,4 @@ windows:
   - ngrok:
       root: ~/Dev/7r/visitame
       panes:
-        - ngrok start -config ./ngrok.yml bmo cron botclient botserver admin thelich visitameweb proxydev keyper
+        - ngrok start -config ./ngrok.yml bmo cron botclient botserver admin thelich visitameweb proxy keyper
