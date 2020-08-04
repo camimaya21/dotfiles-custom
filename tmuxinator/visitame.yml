@@ -15,6 +15,11 @@ windows:
       root: ~/Dev/7r/visitame/bmo-dev
       panes:
         - nvm use v10.17.0 && yarn && PORT=3000 yarn dev
+  # Cron
+  - cron:
+    root: ~/Workspace/visitame/cron
+    panes:
+      - yarn && PORT=3001 yarn dev
   # Web Bot
   - botclient:
       root: ~/Dev/7r/visitame/bot-client-dev
@@ -28,7 +33,7 @@ windows:
   - admin:
       root: ~/Dev/7r/visitame/admin-dev
       panes:
-        - nvm use v10.13.0 && yarn && PORT=3004 yarn start
+        - nvm use v12.18.2 && yarn && PORT=3004 yarn start
   # The Lich
   - thelich:
       root: ~/Dev/7r/visitame/the-lich-dev
@@ -54,8 +59,18 @@ windows:
       root: ~/Dev/7r/visitame/signup
       panes:
         - nvm use v10.13.0 && yarn && PORT=3009 yarn start
+  # Installers app
+  - installersapp:
+      root: ~/Dev/7r/visitame/installers-app
+      panes:
+        - nvm use v12.18.2 && yarn && PORT=3010 yarn start
+  # Gateway proxy
+  - gatewayproxy:
+      root: ~/Dev/7r/visitame/gateway-proxy
+      panes:
+        - nvm use v12.18.2 && yarn && PORT=3011 yarn dev
   # ngrok service
   - ngrok:
       root: ~/Dev/7r/visitame
       panes:
-        - ngrok start -config ./ngrok.yml bmo cron botclient botserver admin thelich visitameweb proxy keyper signup
+        - ngrok start -config ./ngrok.yml bmo cron botclient botserver admin thelich visitameweb proxy keyper signup installersapp gatewayproxy
