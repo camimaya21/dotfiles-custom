@@ -1,18 +1,18 @@
-# ~/.tmuxinator/visitame.yml
+# ~/.tmuxinator/old-proyect.yml
 
-name: visitame
-root: ~/Dev/7r/visitame
+name: old-project
+root: ~/Dev/old-project
 pre_window:
-  - . ~/Dev/7r/visitame/set-vars.sh
+  - . ~/Dev/old-project/set-vars.sh
 windows:
  # Database
   - database:
-      root: ~/Dev/7r/visitame/dev-database
+      root: ~/Dev/old-project/dev-database
       panes:
         - docker-compose up -d
   # Bmo
   - bmo:
-      root: ~/Dev/7r/visitame/bmo-dev
+      root: ~/Dev/old-project/bmo-dev
       panes:
         - nvm use v10.17.0 && yarn && PORT=3000 yarn dev
   # Cron
@@ -22,55 +22,55 @@ windows:
       - yarn && PORT=3001 yarn dev
   # Web Bot
   - botclient:
-      root: ~/Dev/7r/visitame/bot-client-dev
+      root: ~/Dev/old-project/bot-client-dev
       panes:
         - nvm use v9.4.0 && yarn && PORT=3002 yarn start
   - botserver:
-      root: ~/Dev/7r/visitame/bot-server-dev
+      root: ~/Dev/old-project/bot-server-dev
       panes:
         - nvm use v9.4.0 && yarn && PORT=3003 yarn dev
   #Admin
   - admin:
-      root: ~/Dev/7r/visitame/admin-dev
+      root: ~/Dev/old-project/admin-dev
       panes:
         - nvm use v12.18.2 && yarn && PORT=3004 yarn start
   # The Lich
   - thelich:
-      root: ~/Dev/7r/visitame/the-lich-dev
+      root: ~/Dev/old-project/the-lich-dev
       panes:
         - nvm use v10.13.0 && yarn && PORT=3005 yarn dev
   # Visitame web
   - visitameweb:
-      root: ~/Dev/7r/visitame/website
+      root: ~/Dev/old-project/website
       panes:
         - nvm use v10.13.0 && yarn && PORT=3006 yarn start
   # proxy
   - proxy:
-      root: ~/Dev/7r/visitame/website-proxy
+      root: ~/Dev/old-project/website-proxy
       panes:
         - nvm use v10.13.0 && yarn && PORT=3007 yarn dev
   # Keyper
   - keyper:
-      root: ~/Dev/7r/visitame/key-per-dev
+      root: ~/Dev/old-project/key-per-dev
       panes:
         - nvm use v10.13.0 && yarn && PORT=3008 yarn start
   # Signup
   - signup:
-      root: ~/Dev/7r/visitame/signup
+      root: ~/Dev/old-project/signup
       panes:
         - nvm use v10.13.0 && yarn && PORT=3009 yarn start
   # Installers app
   - installersapp:
-      root: ~/Dev/7r/visitame/installers-app
+      root: ~/Dev/old-project/installers-app
       panes:
         - nvm use v12.18.2 && yarn && PORT=3010 yarn start
   # Gateway proxy
   - gatewayproxy:
-      root: ~/Dev/7r/visitame/gateway-proxy
+      root: ~/Dev/old-project/gateway-proxy
       panes:
         - nvm use v12.18.2 && yarn && PORT=3011 yarn dev
   # ngrok service
   - ngrok:
-      root: ~/Dev/7r/visitame
+      root: ~/Dev/old-project
       panes:
         - ngrok start -config ./ngrok.yml bmo cron botclient botserver admin thelich visitameweb proxy keyper signup installersapp gatewayproxy
