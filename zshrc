@@ -58,8 +58,8 @@ setopt EXTENDED_GLOB
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
-# @link: http://github.com/zsh-users/zsh-syntax-highlighting
-# source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#@link: http://github.com/zsh-users/zsh-syntax-highlighting
+source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red') # To have commands starting with `rm -rf` in red:
 
@@ -71,4 +71,4 @@ if [ -f '/Users/camimaya/Dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ca
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/camimaya/Dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/camimaya/Dev/google-cloud-sdk/completion.zsh.inc'; fi
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+alias lzd='lazydocker'

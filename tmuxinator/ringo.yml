@@ -12,27 +12,27 @@ windows:
         - docker-compose up -d
   # Installers-app
   - installers-app:
-      root: ~/Dev/7r/ringo/frontends/installers-app
+      root: ~/Dev/7r/ringo/installers-app
       panes:
         - nvm use lts/erbium && yarn && PORT=3001 yarn start
   # devices-service
   - devices-service:
-      root: ~/Dev/7r/ringo/backends/devices-service
+      root: ~/Dev/7r/ringo/devices-service
       panes:
         - nvm use lts/erbium && yarn && PORT=3002 yarn start:dev
   # visits-service
   - visits-service:
-      root: ~/Dev/7r/ringo/backends/visits-service
+      root: ~/Dev/7r/ringo/visits-service
       panes:
         - nvm use lts/erbium && yarn && PORT=3003 yarn start:dev
   # gateway-proxy
   - gateway-proxy:
-      root: ~/Dev/7r/ringo/backends/gateway-proxy
+      root: ~/Dev/7r/ringo/gateway-proxy
       panes:
         - nvm use lts/erbium && yarn && PORT=3004 yarn dev
   # self-tour app
   - self-tour:
-      root: ~/Dev/7r/ringo/frontends/self-tour
+      root: ~/Dev/7r/ringo/self-tour
       panes:
         - nvm use lts/erbium && yarn && PORT=3005 yarn start
   # ngrok tunnels service
