@@ -72,3 +72,6 @@ if [ -f '/Users/camimaya/Dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ca
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/camimaya/Dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/camimaya/Dev/google-cloud-sdk/completion.zsh.inc'; fi
 alias lzd='lazydocker'
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
