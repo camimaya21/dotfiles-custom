@@ -16,8 +16,8 @@ done
 # automatically enter directories without cd
 setopt auto_cd
 
-# use code as the visual editor
-export VISUAL=code
+# use vim as the visual editor
+export VISUAL=vim
 export EDITOR=vim
 
 # aliases

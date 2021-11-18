@@ -23,3 +23,6 @@ alias tks="tmux kill-session"
 for alias in ~/.zsh/aliases/*; do
   source $alias
 done
+
+# Tools
+alias k="kubectl"

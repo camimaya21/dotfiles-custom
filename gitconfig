@@ -22,7 +22,7 @@
   changed = green
   untracked = cyan
 [core]
-  editor = code
+  editor = vim
   excludesfile = ~/.gitignore
   autocrlf = input
   pager = less -R
